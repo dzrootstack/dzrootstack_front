@@ -1,9 +1,9 @@
 {
-  "name": "bsodium.fr",
+  "name": "dzrootstack-xyz",
   "version": "1.0.0",
   "license": "GPL-2.0-only",
-  "author": "BSoDium",
-  "url": "https://www.bsodium.fr",
+  "author": "DZRootStack",
+  "url": "https://www.dzrootstack-xyz",
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1 --port 3000",

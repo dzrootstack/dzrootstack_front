@@ -8,7 +8,7 @@ import {
 import { SiResearchgate } from 'react-icons/si';
 import { TbBrandDeviantart } from 'react-icons/tb';
 
-export const platforms = ['github', 'figma', 'deviantart', 'researchgate'] as const;
+export const platforms = ['github', 'figma', 'deviantart', 'researchgate', 'all'] as const;
 export type Platform = (typeof platforms)[number]
 
 export const platformDetails: Record<Platform, {
@@ -31,6 +31,11 @@ export const platformDetails: Record<Platform, {
       sublabel: 'Artwork',
     },
     researchgate: {
+      label: 'ResearchGate',
+      sublabel: 'Research paper',
+      icon: SiResearchgate,
+    },
+    all: {
       label: 'ResearchGate',
       sublabel: 'Research paper',
       icon: SiResearchgate,

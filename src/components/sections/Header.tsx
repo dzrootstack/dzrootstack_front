@@ -177,7 +177,7 @@ export default function Header() {
           {details.name.nickname}
         </ATypography>
         . I&apos;m a{" "}
-        <Typography textColor="text.primary">Software engineer</Typography>
+        <Typography textColor="text.primary">{details.title}</Typography>
         &nbsp;
         {currentCompany ? (
           <>

@@ -179,7 +179,7 @@ export default function Reach({ step }: { step: number }) {
               </Alert>
             )}
             <Stack direction="row" justifyContent="end" gap={1}>
-              <Button
+              {/* <Button
                 component="a"
                 color="danger"
                 variant="soft"
@@ -188,7 +188,7 @@ export default function Reach({ step }: { step: number }) {
                 startDecorator={<FaFire />}
               >
                 Surprise me
-              </Button>
+              </Button> */}
               <Button
                 type="submit"
                 variant="soft"

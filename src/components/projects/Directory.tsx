@@ -29,6 +29,7 @@ import { CiSearch, CiWifiOff } from "react-icons/ci";
 import { useMobileMode, useTabletMode } from "@/components/Responsive";
 import { GoDownload } from "react-icons/go";
 import { useSearchParams } from "react-router-dom";
+import projectList from "@/assets/response";
 
 function Message({
   children,
@@ -375,23 +376,40 @@ export default function Directory() {
   const [error, setError] = useState<Error>();
 
   const [filteredProjects, setFilteredProjects] = useState([] as Project[]);
+  const response = projectList as Project[];
 
   useEffect(() => {
     setLoading(true);
-    getProjects()
-      .then((data) => {
-        setProjects(data || []);
-      })
-      .catch(() => {
-        setError(
-          new Error(
-            "There was an error loading the projects. Please try again later."
-          )
-        );
-      })
-      .finally(() => {
-        setLoading(false);
-      });
+
+    setProjects(
+      response?.filter((project) => project.platform !== "all"),
+      (newRes: Project[]) => {
+        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+        !newRes &&
+          setError(
+            new Error(
+              "There was an error loading the projects. Please try again later."
+            )
+          );
+      }
+    );
+
+    setLoading(false);
+
+    // getProjects()
+    //   .then((data) => {
+    //     setProjects(data || []);
+    //   })
+    //   .catch(() => {
+    //     setError(
+    //       new Error(
+    //         "There was an error loading the projects. Please try again later."
+    //       )
+    //     );
+    //   })
+    //   .finally(() => {
+    //     setLoading(false);
+    //   });
   }, []);
 
   useEffect(() => {
