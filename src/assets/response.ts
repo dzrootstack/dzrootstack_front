@@ -31,7 +31,7 @@ const projectList = [
     "title": "DZRootStack.xyz",
     "description": "A highly over-engineered eportfolio built with React, React Spring and MUI Joy",
     "source": "https://github.com/dzrootstack/dzrootstack_front",
-    "demo": "https://dzrootstack-xyz.vercel.app/",
+    "demo": "https://dzrootstack.vercel.app/",
     "language": "TypeScript",
     "platform": "github",
     "createdAt": "2022-09-13T23:33:37Z",

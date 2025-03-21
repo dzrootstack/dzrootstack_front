@@ -1,6 +1,6 @@
 import { Card, Link, Typography } from "@mui/joy";
 import { animated } from "@react-spring/web";
-import useOverlayQueryParam from '@/navigation/useOverlayQueryParam';
+import useOverlayQueryParam from "@/navigation/useOverlayQueryParam";
 import { useMobileMode } from "@/components/Responsive";
 
 /**
@@ -11,7 +11,6 @@ import { useMobileMode } from "@/components/Responsive";
  * expose you to legal risks.
  *
  * If you have any doubts about the usage of this code, please
- * contact the author for clarification, by [filing an issue](https://github.com/BSoDium/bsodium.fr/issues/new).
  *
  * *Don't be an asshole, give credit where it's due.*
  */
@@ -20,9 +19,10 @@ export default function Copyright() {
 
   const hidden = useOverlayQueryParam();
 
-  const isAuthorDomain = ["bsodium.fr", "www.bsodium.fr"].includes(
-    window.location.hostname
-  );
+  const isAuthorDomain = [
+    "dzrootstack-xyz",
+    "www.dzrootstack-xyz.vercel.app",
+  ].includes(window.location.hostname);
 
   return isAuthorDomain ? null : (
     <Card
@@ -33,8 +33,8 @@ export default function Copyright() {
         right: "0",
         width: mobile ? "100vw" : undefined,
         zIndex: 1000,
-        display: hidden ? 'none' : 'flex',
-        flexDirection: 'row',
+        display: hidden ? "none" : "flex",
+        flexDirection: "row",
         borderRadius: 0,
         borderBottomLeftRadius: mobile ? undefined : "1rem",
         padding: "0.5rem 1rem",
@@ -50,15 +50,18 @@ export default function Copyright() {
         }}
       >
         Credit to{" "}
-        <Link href="https://github.com/BSoDium" target="_blank">
-          BSoDium
+        <Link href="https://github.com/dzrootstack" target="_blank">
+          DZRootStack
         </Link>{" "}
         for the{" "}
-        <Link href="https://www.bsodium.fr" target="_blank">
+        <Link href="https://dzrootstack-xyz.vercel.app" target="_blank">
           original design
         </Link>{" "}
         and{" "}
-        <Link href="https://github.com/BSoDium/bsodium.fr" target="_blank">
+        <Link
+          href="https://github.com/dzrootstack/dzrootstack-front"
+          target="_blank"
+        >
           code
         </Link>
         .

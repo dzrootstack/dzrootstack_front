@@ -1,9 +1,7 @@
 {
-  "name": "dzrootstack-xyz",
+  "name": "dzrootstack-xyz.vercel.app",
   "version": "1.0.0",
-  "license": "GPL-2.0-only",
-  "author": "DZRootStack",
-  "url": "https://www.dzrootstack-xyz",
+  "author": "dzrootstack",
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1 --port 3000",

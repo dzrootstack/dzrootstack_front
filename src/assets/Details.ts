@@ -185,7 +185,7 @@ const details = {
     location: "Florida, United States",
     email: "brett.smith.mi@outlook.com",
     phone: "+1 (773) 599 2010",
-    website: "https://dzrootstack-xyz.vercel.app/",
+    website: "https://dzrootstack.vercel.app/",
     linkedin: "www.linkedin.com/in/brett-smith-8a9138351",
     github: "https://www.github.com/dzrootstack",
     researchgate: "https://www.researchgate.net/profile/dzrootstack",

@@ -167,7 +167,7 @@ export default function NoMatch() {
           >
             <Button
               component={Link}
-              to="https://github.com/BSoDium/bsodium.fr/issues/new?assignees=BSoDium&labels=bug&projects=&template=bug_report.md"
+              to="https://github.com/dzrootstack/dzrootstack-xyz.vercel.app/issues/new?assignees=dzrootstack&labels=bug&projects=&template=bug_report.md"
               target="_blank"
               size="lg"
               variant="outlined"
