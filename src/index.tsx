@@ -11,7 +11,6 @@ if (import.meta.env.VITE_GA_MEASUREMENT_ID) {
 }
 
 const root = document.getElementById("root");
-console.log("==============================>", root);
 if (!root) throw new Error("No root element found");
 
 ReactDOM.createRoot(root).render(
