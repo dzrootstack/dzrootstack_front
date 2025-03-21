@@ -130,10 +130,10 @@ function ProjectCard({
       <Stack direction="row" gap={2} justifyContent="space-between">
         <Stack direction="row" gap={2}>
           <Typography level="body2" startDecorator={<FaStar />}>
-            {project.interactions?.stars}
+            {/* {project.interactions?.stars} */}
           </Typography>
           <Typography level="body2" startDecorator={<FaCodeBranch />}>
-            {project.interactions?.forks}
+            {/* {project.interactions?.forks} */}
           </Typography>
         </Stack>
         <Stack direction="row" gap={1}>
