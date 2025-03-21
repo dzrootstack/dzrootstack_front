@@ -53,7 +53,7 @@ export function Languages() {
             </Avatar>
           }
         >
-          {`${language.name}${language.native ? " (native)" : ""}`}
+          {/* {`${language.name}${language.native ? " (native)" : ""}`} */}
         </Chip>
       ))}
     </Stack>

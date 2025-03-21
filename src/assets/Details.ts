@@ -176,6 +176,10 @@ const details = {
       name: "English",
       level: "fluent",
     },
+    {
+      name: "English",
+      level: "native",
+    },
   ],
   contact: {
     location: "Florida, United States",

@@ -14,7 +14,6 @@ import {
 import React, { useEffect, useState } from "react";
 import { BsJournalCode } from "react-icons/bs";
 import { FaCodeBranch, FaGithub, FaStar } from "react-icons/fa";
-// import getProjects from "@/utils/Api";
 import { Parallax } from "react-scroll-parallax";
 import { FiArrowRight, FiCode, FiExternalLink } from "react-icons/fi";
 import { RiBracesLine } from "react-icons/ri";
@@ -170,7 +169,10 @@ function ProjectCard({
 
 export default function Featured() {
   const mobile = useMobileMode();
-  const response = projectList as Project[];
+  const response =
+    (projectList?.filter(
+      (project) => project.platform === "github"
+    ) as Project[]) || [];
 
   const [projects, setProjects] = useState<Project[]>([]);
   const [loading, setLoading] = useState(false);
@@ -179,36 +181,14 @@ export default function Featured() {
   useEffect(() => {
     setLoading(true);
 
-    setProjects(
-      response?.filter((project) => project.platform === "github"),
-      (newRes: Project[]) => {
-        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-        !newRes &&
-          setError(
-            new Error(
-              "Failed to load featured projects, our API was unreachable."
-            )
-          );
-      }
-    );
+    if (!response) {
+      setError(
+        new Error("Failed to load featured projects, our API was unreachable.")
+      );
+    }
+    setProjects(response);
 
     setLoading(false);
-    // getProjects()
-    //   .then((data) => {
-    //     setProjects(
-    //       data?.filter((project) => project.platform === "github") || []
-    //     );
-    //   })
-    //   .catch(() => {
-    //     setError(
-    //       new Error(
-    //         "Failed to load featured projects, our API was unreachable."
-    //       )
-    //     );
-    //   })
-    //   .finally(() => {
-    //     setLoading(false);
-    //   });
   }, []);
 
   return (

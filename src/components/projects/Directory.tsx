@@ -22,7 +22,6 @@ import {
   Project,
   rank,
 } from "@/assets/Projects";
-import getProjects from "@/utils/Api";
 import moment from "moment";
 import { FiCode, FiFile, FiPlay } from "react-icons/fi";
 import { CiSearch, CiWifiOff } from "react-icons/ci";
@@ -376,40 +375,24 @@ export default function Directory() {
   const [error, setError] = useState<Error>();
 
   const [filteredProjects, setFilteredProjects] = useState([] as Project[]);
-  const response = projectList as Project[];
+  const response =
+    (projectList?.filter(
+      (project) => project.platform !== "all"
+    ) as Project[]) || [];
 
   useEffect(() => {
     setLoading(true);
+    if (!response) {
+      setError(
+        new Error(
+          "There was an error loading the projects. Please try again later."
+        )
+      );
+    }
 
-    setProjects(
-      response?.filter((project) => project.platform !== "all"),
-      (newRes: Project[]) => {
-        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-        !newRes &&
-          setError(
-            new Error(
-              "There was an error loading the projects. Please try again later."
-            )
-          );
-      }
-    );
+    setProjects(response);
 
     setLoading(false);
-
-    // getProjects()
-    //   .then((data) => {
-    //     setProjects(data || []);
-    //   })
-    //   .catch(() => {
-    //     setError(
-    //       new Error(
-    //         "There was an error loading the projects. Please try again later."
-    //       )
-    //     );
-    //   })
-    //   .finally(() => {
-    //     setLoading(false);
-    //   });
   }, []);
 
   useEffect(() => {
