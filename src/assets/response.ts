@@ -112,10 +112,10 @@ const projectList = [
     }
   },
   {
-    "title": "spectrum visualizer demo",
+    "title": "spectrum visualization",
     "description": "A simple demo of a waveform generator for microphone recording UIs",
-    "source": "https://github.com/BSoDium/spectrum-visualizer-demo",
-    "demo": "https://spectrum-visualizer-demo.vercel.app/",
+    "source": "https://github.com/dzrootstack/spectrum-visualization",
+    "demo": "https://spectrum-visualization.vercel.app/",
     "language": "TypeScript",
     "platform": "github",
     "createdAt": "2024-10-12T00:58:24Z",
