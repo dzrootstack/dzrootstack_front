@@ -6,8 +6,8 @@ import recoMin from "@/assets/icons/reco.webp";
 import reco from "@/assets/icons/reco.webp";
 import teradata from "@/assets/icons/teradata.webp";
 import teradataMin from "@/assets/icons/teradata.webp";
-import NexWeb from "@/assets/icons/NexWeb.webp";
-import NexWebMin from "@/assets/icons/NexWeb.webp";
+import NexWeb from "@/assets/icons/NexWEB.webp";
+import NexWebMin from "@/assets/icons/NexWEB.webp";
 
 const details = {
   name: {
